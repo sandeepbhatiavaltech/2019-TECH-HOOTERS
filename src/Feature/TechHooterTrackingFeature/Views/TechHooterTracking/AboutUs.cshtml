@@ -1,0 +1,51 @@
+﻿@using Sitecore.Mvc.Configuration
+@model TechHooterTrackingFeature.ViewModel.TrackUserViewModel
+
+@if (Model != null)
+{
+    <h1>Customers Information</h1>
+   
+        <table border="1" cellpadding="6">
+            @for (int i = 0; i < Model.Customers.Count; i++)
+            {
+            <tr>
+                <td>
+                    @Html.TextBox("customers[" + @i + "].CustomerID",
+                              Model.Customers[i].ContactId,
+                              new { @readonly = "readonly" })
+                </td>
+                <td>
+                    @Html.TextBox("customers[" + @i + "].CustomerName",
+                    Model.Customers[i].CountryName,
+                    new { @readonly = "readonly" })
+                <td>
+                    @Html.TextBox("customers[" + @i + "].Country",
+                                Model.Customers[i].CountryName,
+                                new { @readonly = "readonly" })
+                </td>
+                <td>
+                    @Html.TextBox("customers[" + @i + "].IPAddress",
+                                                  Model.Customers[i].IPAddress,
+                                                  new { @readonly = "readonly" })
+                </td>
+                <td>
+                    @Html.TextBox("customers[" + @i + "].Latitude",
+                                                  Model.Customers[i].Latitude,
+                                                  new { @readonly = "readonly" })
+                </td>
+                <td>
+                    @Html.TextBox("customers[" + @i + "].Longitude",
+                                                  Model.Customers[i].Longitude,
+                                                  new { @readonly = "readonly" })
+                </td>
+                <td>
+                    @Html.TextBox("customers[" + @i + "].Place",
+                                                  Model.Customers[i].Place,
+                                                  new { @readonly = "readonly" })
+                </td>
+            </tr>
+            }
+           
+        </table>
+    
+}

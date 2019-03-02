@@ -1,0 +1,182 @@
+﻿
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    @Html.Sitecore().VisitorIdentification()
+    <link rel="stylesheet" type="text/css" href="~/source/bootstrap-3.3.6-dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="~/source/font-awesome-4.5.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="~/style/slider.css">
+    <link rel="stylesheet" type="text/css" href="~/style/mystyle.css">
+    <style>
+
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+
+        /*  Set padding to keep content from hitting the edges */
+        .body-content {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        /* Override the default bootstrap behavior where horizontal description lists
+           will truncate terms that are too long to fit in the left column
+        */
+        .dl-horizontal dt {
+            white-space: normal;
+        }
+
+        /* Set width on the form input elements since they're 100% wide by default*/
+        input,
+        select,
+        textarea {
+            max-width: 280px;
+        }
+
+        section {
+            padding: 5% 0;
+        }
+
+        .alizarin {
+            background: #e74c3c;
+        }
+
+        .amethyst {
+            background: #9b59b6;
+        }
+
+        .emerald {
+            background: #2ecc71;
+        }
+
+        .midnight-blue {
+            background: #2c3e50;
+        }
+
+        .peter-river {
+            background: #3498db;
+        }
+
+        .dl {
+            background: #f0f0f0;
+            padding: 30px 0;
+            border-radius: 20px;
+            position: relative;
+        }
+
+            .dl:before {
+                content: " ";
+                height: 20px;
+                width: 20px;
+                background: #ddd;
+                border-radius: 20px;
+                position: absolute;
+                left: 50%;
+                top: 20px;
+                margin-left: -10px;
+            }
+
+            .dl .brand {
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                padding: 10px 15px;
+                margin-top: 10px;
+                text-align: center;
+                min-height: 100px;
+            }
+
+            .dl .discount {
+                min-height: 50px;
+                position: relative;
+                font-size: 80px;
+                line-height: 80px;
+                text-align: center;
+                font-weight: bold;
+                padding: 20px 15px 0;
+                color: #f1c40f;
+            }
+
+                .dl .discount:after {
+                    content: " ";
+                    border-right: 20px solid transparent;
+                    border-left: 20px solid transparent;
+                    position: absolute;
+                    bottom: -20px;
+                    left: 20%;
+                }
+
+                .dl .discount.alizarin:after {
+                    border-top: 20px solid #e74c3c;
+                }
+
+                .dl .discount.peter-river:after {
+                    border-top: 20px solid #3498db;
+                }
+
+                .dl .discount.emerald:after {
+                    border-top: 20px solid #2ecc71;
+                }
+
+                .dl .discount.amethyst:after {
+                    border-top: 20px solid #9b59b6;
+                }
+
+                .dl .discount .type {
+                    font-size: 20px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    margin-top: -30px;
+                }
+
+            .dl .descr {
+                color: #999;
+                margin-top: 10px;
+                padding: 20px 15px;
+            }
+
+            .dl .ends {
+                padding: 0 15px;
+                color: #f1c40f;
+                margin-bottom: 10px;
+            }
+
+            .dl .coupon {
+                min-height: 50px;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 18px;
+                padding: 20px 15px;
+            }
+
+                .dl .coupon a.open-code {
+                    color: #16a085;
+                }
+
+                .dl .coupon .code {
+                    letter-spacing: 1px;
+                    border-radius: 4px;
+                    margin-top: 10px;
+                    padding: 10px 15px;
+                    color: #f1c40f;
+                    background: #f0f0f0;
+                }
+    </style>
+</head>
+<body>
+   
+    <div>
+        @Html.Sitecore().Placeholder("main")
+    </div>
+    <div>
+        @Html.Sitecore().Placeholder("techhootertracking")
+    </div>
+</body>
+</html>
